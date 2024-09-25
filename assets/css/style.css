@@ -1,0 +1,491 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+header .navbar{
+    width: 100%;
+    background-color: rgb(44,62,80);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+header .navbar .content{
+    width: 90%;
+    padding: 20px 0px ;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .navbar .content .links{ 
+    display: flex;
+    list-style-type: none;
+}
+header .navbar .content .links a{
+    margin-right: 25px;
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+}
+header .navbar .content a{
+    text-decoration: none;
+}
+header .navbar .content h1{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}
+header .navbar .content .links a:hover{
+    background-color: rgb(26, 188, 156) ;
+    color: rgb(44,62,80);
+    text-decoration: solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*  */
+header .hero{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(26, 188, 156);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.bg-image{
+    width: 160px;
+    height: 160px;
+    background-color: rgb(44,62,80);
+    border-radius: 50%;
+    position: relative;
+}
+.bg-image img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
+    top: -110px;
+    left: -40px;
+    border-bottom-left-radius:60%;
+    border-bottom-right-radius:50px ;
+}
+header .hero h2{
+    margin-top: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+header .hero p{
+    color: white;
+    font-size:16px;
+    text-transform:capitalize;
+}
+header .hero p:hover{
+    font-size: 18px;
+    background-color:rgba(44, 62, 80, 0.329) ;
+    color: rgb(44,62,80);
+    border-bottom:3px solid white;
+    padding: 5px;
+}
+
+header .hero .star-1 i {
+    color: white;
+}
+.star-1::before,.star-1::after{
+    background-color: white;
+}
+/*  */
+.protfolio-section , .contact-me .box-3{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.protfolio-section .box-1 , .about-section .box-2 , .contact-me .box-3{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 70px 0px;
+}
+.protfolio-section .box-1  h3 ,.contact-me .box-3 h3{
+    color: rgb(44,62,80);
+}
+.protfolio-section .box-1  h3 ,.about-section .box-2 h3 , .contact-me .box-3 h3{
+    font-size: 30px;
+    text-transform:capitalize;
+}
+.protfolio-section .box-1 .star-2,header .hero .star-1 ,.about-section .box-2 .star-3 ,.contact-me .box-3 .star-4{
+    position: relative;
+    margin: 30px 0px;
+}
+.star-2 i ,.star-1 i , .star-3 i , .star-4 i{
+    font-size: 16px;
+    position: relative;
+    animation:star 0.5s infinite alternate linear ;
+}
+.star-2 i ,.star-4 i{
+    color: rgb(44,62,80);
+}
+.star-1::before,
+.star-2::before,
+.star-3::before,
+.star-4::before{
+    content: "";
+    height: 3px;
+    width: 50px;
+    position: absolute;
+    left: -60px;
+    top: 10px;
+    border-radius: 20px;
+}
+.star-2::before,.star-2::after,.star-4::after,.star-4::before{
+    background-color: rgb(44,62,80);
+}
+.star-1::after,
+.star-2::after,
+.star-3::after,
+.star-4::after{
+    content: "";
+    height: 3px;
+    width: 50px;
+    position: absolute;
+    right: -60px;
+    top: 10px;
+    border-radius: 20px;
+}
+.card-1,.card-2,.card-3,.card-4,.card-5,.card-6{
+    position: relative;
+}
+.animation{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(26, 188, 156);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation p{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+.card-1:hover .animation,
+.card-2:hover .animation,
+.card-3:hover .animation,
+.card-4:hover .animation,
+.card-5:hover .animation,
+.card-6:hover .animation
+{
+    height: 100%;
+}
+.protfolio-section .box-1 .cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.protfolio-section .box-1 .cards .card-1,.card-2,.card-3,.card-4,.card-5,.card-6{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card-1 img ,.card-2 img,.card-3 img,.card-4 img,.card-5 img,.card-6 img{
+    background-color: rgb(35, 109, 88);
+    width: 200px;
+    padding: 20px;
+    border-radius: 50%;
+}
+.card-1 img {
+    background-color: rgb(35, 109, 88);
+}
+.card-2 img {
+    background-color: rgb(224,91,73);
+}
+.card-3 img {
+    background-color: rgb(236,240,240);
+}
+.card-4 img {
+    background-color: rgb(226,124,62);
+}
+.card-5 img {
+    background-color: rgb(239,200,74);
+}
+.card-6 img {
+    background-color: rgb(51,77,92);
+}
+.protfolio-section .box-1 .cards .card-1{
+    background-color: rgb(186, 76, 99);
+}
+.protfolio-section .box-1 .cards .card-2{
+    background-color: rgb(31, 164, 182);
+}
+.protfolio-section .box-1 .cards .card-3{
+    background-color: rgb(19, 15, 15);
+}
+.protfolio-section .box-1 .cards .card-4{
+    background-color: rgb(29, 131, 193);
+}
+.protfolio-section .box-1 .cards .card-5{
+    background-color: rgb(16, 55, 181);
+}
+.protfolio-section .box-1 .cards .card-6{
+    background-color: rgb(204, 178, 163);
+}
+
+.protfolio-section .box-1 .cards img{
+    width:150px;
+    
+}
+/*  */
+.about-section{
+    width: 100%;
+    background-color: rgb(26, 188, 156);
+}
+.about-section .box-2 h3 ,.star-3{
+    color: white;
+}
+.star-3::before,.star-3::after{
+    background-color: white;
+}
+.about-section .box-2 .words{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.about-section .box-2 .words p{
+    width: 25%;
+}
+.about-section .box-2 .words  p{
+    font-size: 16px;
+    color: white;
+}
+.about-section .box-2 button{
+    margin-top: 40px;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color:rgb(26, 188, 156) ;
+    color: white;
+}
+.about-section .box-2 button:hover{
+    background-color: rgb(44, 62, 80);
+    color: white;
+    box-shadow: 0px 0px 10px 10px #2c3e5096;
+    position: relative;
+    animation:star 0.5s infinite alternate ease-in;
+    cursor: pointer;
+}
+/*  */
+
+.contact-me .box-3 .form{
+    width: 50%;
+    margin: 20px 0;
+}
+.contact-me .box-3 .form input,textarea{
+    width: 100%;
+    margin-bottom: 25px ;
+    border: none;
+    border-bottom:1px solid rgba(128, 128, 128, 0.342) ;
+    outline: none;
+}
+.contact-me .box-3 .form input{
+    padding-bottom: 20px ;
+}
+.contact-me .box-3 .form textarea::placeholder,
+input::placeholder{
+    font-size: 14px;
+}
+.contact-me .box-3 .form textarea:hover,
+.contact-me .box-3 .form input:hover{
+    border-bottom:2px solid rgb(26, 188, 156);
+}
+.contact-me .box-3 .form button{
+    width: 60px;
+    padding: 12px;
+    background-color:rgb(26, 188, 156) ;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*  */
+.container{
+    width: 100%;
+    background-color: rgb(44,62,80);
+}
+.container .box-4{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    padding: 70px 0px;
+}
+.container .box-4 .about , .around-the-web , .location{
+    text-align: center;
+    width: 25%;
+    padding: 20px;
+}
+.container .box-4 .around-the-web i{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgb(44,62,80);
+    color: white;
+    
+}
+.container .box-4 p{
+    font-size:16px;
+    color: white;
+    margin-top: 20px;
+}
+.container .box-4 .about a{
+    color:rgb(26, 188, 156);
+}
+.container .box-4 .around-the-web .facebook i:hover{
+    background-color: #1877F2;
+    border: 2px solid #1877F2;
+    border-radius: 5px;
+}
+.container .box-4 .around-the-web .twitter i:hover{
+    background-color: #1DA1F2;
+    border: 2px solid #1DA1F2;
+    border-radius: 5px;
+}
+.container .box-4 .around-the-web .linkedin i:hover{
+    background-color: #0077B5;
+    border: 2px solid #0077B5;
+    border-radius: 5px;
+}
+.container .box-4 .around-the-web .dribble i:hover{
+    background-color: #ea4c39;
+    border: 2px solid #ea4c39;
+    border-radius: 5px;
+}
+.container .box-4 h4{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+
+}
+/*  */
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 33, 43);
+    padding: 20px 0;
+    font-size: 16px;
+    color: white;
+}
+/*  */
+@keyframes star{
+    0%{
+        top:-10px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@media(max-width:992px){
+    .protfolio-section .box-1 .cards .card-1,.card-2,.card-3,.card-4,.card-5,.card-6{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .background-1 , .background-2 , .background-3 , .background-4 , .background-5 , .background-6{
+        width: 150px;
+        height: 150px;
+    }
+    .container .box-4{
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    .container .box-4 .about , .around-the-web , .location{
+        width: 50%;
+    }
+}
+@media (max-width:768px){
+    header .hero img{
+        width: 250px;
+    }
+    header .navbar .content{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-me .box-3 .form{
+        width: 60%;
+        margin: 20px 0;
+    }
+    .protfolio-section .box-1 .cards img{
+        width:100px;
+        
+    }
+    .bg-image{
+        width: 160px;
+        height: 160px; 
+    }
+    .bg-image img{
+        width: 150px;
+        height: 200px;
+        top: -80px;
+        left: -70px;
+        border-bottom-left-radius:70%;
+        border-bottom-right-radius:50%;
+    }
+}
+@media (max-width:576px){
+    .contact-me .box-3 .form button{
+        width: 100%;
+    }
+    .container .box-4 .about , .around-the-web , .location{
+        width: 80%;
+    }
+    .background-1 , .background-2 , .background-3 , .background-4 , .background-5 , .background-6{
+        width: 100px;
+        height: 100px;
+    }
+    .about-section .box-2 .words p{  
+        width: 50%;
+    }
+    .about-section .box-2 .words {
+        flex-direction: column;
+    }
+}
+@media (max-width:360px){
+    header .navbar .content .links a{
+        font-size: 14px;
+    }
+    .container .box-4 .around-the-web i{
+        font-size: 12px;  
+    }
+}
+
